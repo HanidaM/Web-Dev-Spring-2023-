@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:ital,wght@1,900&display=swap');;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F0F2F5;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 70px;
+    margin-top: 100px;
+}
+
+
+
+.intro p {
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+.quote {
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+
+.logInfo {
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 15px;
+}
+
+.input {
+    margin: 10px;
+    padding: 15px 65px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.button1 {
+    padding: 5px 110px;
+    background-color: #166FE5;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.info section a{
+    text-decoration: none;
+    border: none;
+}
+
+.blueAnkor {
+    color: #1877F2;
+}
+
+.button2 {
+    background-color: #36A420;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 45px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    border: 1px solid gray;
+}
+
+section p {
+    margin-left: 45px;
+}
+
+section p a{
+    color: #000;
+    font-weight: 900;
+}
+
+footer {
+    background-color: #fff;
+    padding: 20px 100px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #8A8D91;
+    font-size: 15px;
+    padding: 10px;
+}
+
+h5 {
+    color: gray;
+}
