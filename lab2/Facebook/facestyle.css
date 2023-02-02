@@ -5,6 +5,7 @@
 }
 
 body {
+    font-family: Helvetica, Arial,sans-serif;
     background-color: #F0F2F5;
 }
 
@@ -15,7 +16,11 @@ main {
     margin-top: 100px;
 }
 
-
+.labguages{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .intro p {
     font-family: 'Lato', sans-serif;
@@ -23,7 +28,7 @@ main {
     font-weight: bold;
 }
 .quote {
-    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 .logInfo {
@@ -37,6 +42,9 @@ main {
     padding: 15px 65px;
     border-radius: 10px;
     border: 1px solid gray;
+}
+.inputbutton1{
+    
 }
 
 .button1 {
@@ -93,6 +101,6 @@ ul li a{
     padding: 10px;
 }
 
-h5 {
-    color: gray;
+.copyright {
+    color:#737373
 }
