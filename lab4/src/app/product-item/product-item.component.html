@@ -1,0 +1,17 @@
+<h3>
+    <a href="{{product.link}}">
+    {{product.name}}
+    </a>
+</h3>
+<p *ngIf="product.description" class="description-product">
+    Description: {{product.description}}
+</p>
+<p *ngIf="product.price">
+    Price: <strong>${{product.price}}</strong>
+</p>
+<p *ngIf="product.rating">
+    Rating: <strong>{{product.rating}}</strong>
+</p>
+<img src="{{product.image}}" alt="" height="250">
+
+<br>
