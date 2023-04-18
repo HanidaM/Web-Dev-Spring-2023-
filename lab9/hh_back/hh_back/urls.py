@@ -1,8 +1,7 @@
-"""
-URL configuration for hh_back project.
+"""hh_back URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
+    https://docs.djangoproject.com/en/4.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -16,13 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from api import views 
+from api import views
 
 urlpatterns = [
-    path('companies/', views.all_companies),
-    path('companies/<int:id>/', views.one_company),
-    path('companies/<int:id>/vacancies/', views.company_vacancies),
-    path('vacancies/', views.all_vacancies),
-    path('vacancies/<int:id>/', views.one_vacancy),
-    path('vacancies/top_ten/', views.top_ten_vacancies),
+    path('admin/', admin.site.urls),
+    path('api/', include('api.urls')),
+    path('', views.home)
 ]
