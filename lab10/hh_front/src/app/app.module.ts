@@ -1,22 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from "@angular/common/http";
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { RouterModule, Routes } from '@angular/router';
-import { VacancyComponent } from './vacancy/vacancy.component'
 
-const routes: Routes = []
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { VacancyListComponent } from './vacancy-list/vacancy-list.component';
+import {RouterModule} from "@angular/router";
+import { CompanyListComponent } from './company-list/company-list.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
-    VacancyComponent
+    VacancyListComponent,
+    CompanyListComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+      {path: '', component: CompanyListComponent},
+      {path : 'vacancies/:id', component: VacancyListComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

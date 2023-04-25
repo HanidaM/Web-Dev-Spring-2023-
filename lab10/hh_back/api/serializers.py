@@ -23,7 +23,6 @@ class CompanySerializer1(serializers.Serializer):
 
 
 class CompanySerializer2(serializers.ModelSerializer):
-    # user = serializers.HiddenField(default=serializers.CurrentUserDefault())
     class Meta:
         model = Company
         fields = ('id', 'name', 'city', 'description', 'address')
@@ -47,7 +46,6 @@ class VacancySerializer1(serializers.Serializer):
         return instance
 
 class VacancySerializer2(serializers.ModelSerializer):
-    # user = serializers.HiddenField(default=serializers.CurrentUserDefault())
     class Meta:
         model = Vacancy
         fields = ('id', 'name', 'salary', 'description', 'company')

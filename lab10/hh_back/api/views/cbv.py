@@ -42,12 +42,7 @@ class VacancyAPIView(APIView):
         except:
             return JsonResponse({"Error": "invalid input"})
 
-        # serializer = CompanySerializer2(data=request.data, context={'request': request})
-        # if serializer.is_valid():
-        #     serializer.save()
-        #     return Response(serializer.data)
-        # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
+  
 
 
 class CompanyDetailAPIView(APIView):
@@ -95,11 +90,8 @@ class VacancyDetailAPIView(APIView):
     def get(self, request, vacancy_id):
         instance = self.get_object(vacancy_id)
         serializer = VacancySerializer2(instance)
-        # try:
         return Response(serializer.data)
-        # except:
-        #     return JsonResponse({vacancy_id: "Not found"})
-
+    
     def put(self, request, vacancy_id):
         try:
             instance = self.get_object(vacancy_id)
