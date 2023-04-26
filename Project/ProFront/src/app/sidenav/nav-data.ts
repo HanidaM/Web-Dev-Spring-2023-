@@ -6,32 +6,19 @@ export const navbarData = [
     },
     {
         routeLink: 'products',
-        icon: 'fal fa-box-open',
+        icon: 'fal fa-ticket',
         label: 'Products'
     },
     {
-        routeLink: 'statistics',
-        icon: 'fal fa-chart-bar',
-        label: 'Statistics'
+        routeLink: 'points',
+        icon: 'fal fa-map-marker',
+        label: 'Places'
     },
-    {
-        routeLink: 'coupens',
-        icon: 'fal fa-tags',
-        label: 'Coupens'
-    },
-    {
-        routeLink: 'pages',
-        icon: 'fal fa-file',
-        label: 'Pages'
-    },
+ 
     {
         routeLink: 'media',
         icon: 'fal fa-camera',
         label: 'Media'
     },
-    {
-        routeLink: 'settings',
-        icon: 'fal fa-cog',
-        label: 'Settings'
-    },
+
 ];
