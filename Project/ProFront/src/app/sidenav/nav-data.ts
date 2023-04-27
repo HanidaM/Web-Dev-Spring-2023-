@@ -7,7 +7,7 @@ export const navbarData = [
     {
         routeLink: 'products',
         icon: 'fal fa-ticket',
-        label: 'Products'
+        label: 'Tickets'
     },
     {
         routeLink: 'points',
