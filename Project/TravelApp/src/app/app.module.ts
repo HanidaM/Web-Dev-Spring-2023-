@@ -1,5 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+
+
+import { AuthInterceptor } from './interceptors/AuthInterceptor';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,9 +22,11 @@ import { HomeComponent } from './home/home.component';
 import { BookComponent } from './book/book.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { ServicesComponent } from './services/services.component';
-import { GaleryComponent } from './galery/galery.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
+import { SignupComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -21,18 +36,30 @@ import { FooterComponent } from './footer/footer.component';
     BookComponent,
     SubscriptionComponent,
     ServicesComponent,
-    GaleryComponent,
     AboutComponent,
     FooterComponent,
+    SignupComponent,
+    SigninComponent,
+    GalleryComponent,
     
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-  ReactiveFormsModule
+  ReactiveFormsModule, MatDialogModule,
+  MatButtonModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatGridListModule,
+  MatCardModule,
   ],
-  providers: [],
+  providers: [ {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
