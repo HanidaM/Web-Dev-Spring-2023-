@@ -1,0 +1,11 @@
+<h1>{{ userProfile.username }}'s Profile</h1>
+<!-- display other profile information -->
+<h2>Bookings</h2>
+<div *ngIf="bookings">
+  <ul>
+    <li *ngFor="let booking of bookings">{{ booking.tour_name }} - {{ booking.tour_price }}</li>
+  </ul>
+</div>
+<div *ngIf="!bookings">
+  <p>No bookings yet.</p>
+</div>

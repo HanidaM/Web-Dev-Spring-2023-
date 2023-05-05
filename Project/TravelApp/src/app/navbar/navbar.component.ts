@@ -30,8 +30,6 @@ export class NavbarComponent implements OnInit {
     }
   };
 
-
-
   openLoginDialog(): void {
     this.dialogRef = this.dialog.open(SigninComponent, {
       width: '500px',

@@ -20,13 +20,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { BookComponent } from './book/book.component';
-import { SubscriptionComponent } from './subscription/subscription.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ToursComponent } from './tours/tours.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +35,14 @@ import { GalleryComponent } from './gallery/gallery.component';
     NavbarComponent,
     HomeComponent,
     BookComponent,
-    SubscriptionComponent,
     ServicesComponent,
     AboutComponent,
     FooterComponent,
     SignupComponent,
     SigninComponent,
     GalleryComponent,
+    ToursComponent,
+    ProfileComponent,
     
   ],
   imports: [

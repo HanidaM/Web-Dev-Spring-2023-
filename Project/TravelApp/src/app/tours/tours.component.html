@@ -1,0 +1,20 @@
+<section class="tours" id="tours">
+    <div class="container">
+      <div class="main-txt">
+        <h1><span>T</span>ours</h1>
+      </div>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-4 py-3 py-md-0" *ngFor="let tour of tours">
+          <div class="card">
+            <img [src]="tour.image" alt="">
+            <div class="card-body">
+              <h3>{{ tour.name }}</h3>
+              <p>{{ tour.description }}</p>
+              <h6>Price: <strong>{{ tour.price }}</strong></h6>
+              <a href="#" (click)="bookTour(tour)">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

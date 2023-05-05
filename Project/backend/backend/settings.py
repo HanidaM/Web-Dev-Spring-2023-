@@ -1,4 +1,5 @@
 import datetime
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -32,6 +33,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     
     'user',
+    'tours'
 ]
 
 REST_FRAMEWORK = {
